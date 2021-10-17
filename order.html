@@ -37,7 +37,7 @@
           <img src="img/pizza-625_625x350_81437471362.jpg" alt="pizza" />
           <hr />
           <form
-            action="http://www.stonecoldprofessor.com/pizza-order.php"
+            action="https://www.stonecoldprofessor.com/pizza-order.php"
             method="POST"
           >
             <label for="first">First name:</label>
@@ -47,25 +47,78 @@
             <input type="text" id="last" name="last" /><br /><br />
 
             <label for="add1">Address 1:</label><br />
-            <input type="text" id="add1" name="add1" /><br /><br />
+            <input type="text" id="add1" name="add1" required /><br /><br />
 
             <label for="add2">Address 2:</label><br />
             <input type="text" id="add2" name="add2" /><br /><br />
 
             <label for="city">City:</label>
-            <input type="text" id="city" name="city" /><br /><br />
+            <input type="text" id="city" name="city" required /><br /><br />
 
             <label for="state">State:</label>
-            <input type="text" id="state" name="state" /><br /><br />
+            <select name="state" id="state">
+              <option value="al">AL</option>
+              <option value="ak">AK</option>
+              <option value="az">AZ</option>
+              <option value="ar">AR</option>
+              <option value="ca">CA</option>
+              <option value="co">CO</option>
+              <option value="ct">CT</option>
+              <option value="de">DE</option>
+              <option value="dc">DC</option>
+              <option value="fl">FL</option>
+              <option value="ga">GA</option>
+              <option value="hi">HI</option>
+              <option value="id">ID</option>
+              <option value="il">IL</option>
+              <option value="in">IN</option>
+              <option value="ia">IA</option>
+              <option value="ks">KS</option>
+              <option value="ky">KY</option>
+              <option value="la">LA</option>
+              <option value="me">ME</option>
+              <option value="md">MD</option>
+              <option value="ma">MA</option>
+              <option value="mi">MI</option>
+              <option value="mn">MN</option>
+              <option value="ms">MS</option>
+              <option value="mo">MO</option>
+              <option value="il">MT</option>
+              <option value="ne">NE</option>
+              <option value="nv">NV</option>
+              <option value="nh">NH</option>
+              <option value="nj">NJ</option>
+              <option value="nm">NM</option>
+              <option value="ny">NY</option>
+              <option value="nc">NC</option>
+              <option value="nd">ND</option>
+              <option value="oh">OH</option>
+              <option value="ok">OK</option>
+              <option value="or">OR</option>
+              <option value="pa">PA</option>
+              <option value="ri">RI</option>
+              <option value="sc">SC</option>
+              <option value="sd">SD</option>
+              <option value="tn">TN</option>
+              <option value="tx">TX</option>
+              <option value="ut">UT</option>
+              <option value="va">VA</option>
+              <option value="wa">WA</option>
+              <option value="wv">WV</option>
+              <option value="wi">WI</option>
+              <option value="wy">WY</option>
+            </select>
+            <br />
+            <br />
 
             <label for="zip">Zip Code:</label>
-            <input type="text" id="zip" name="zip" /><br /><br />
+            <input type="text" id="zip" name="zip" required /><br /><br />
 
             <label for="phone">Phone Number:</label>
-            <input type="text" id="phone" name="phone" /><br /><br />
+            <input type="text" id="phone" name="phone" required /><br /><br />
 
             <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" /><br /><br />
+            <input type="email" id="email" name="email" required /><br /><br />
 
             <label for="comments">Comments:</label><br />
             <textarea
@@ -78,10 +131,13 @@
 
             <label for="crust">Crust Type:</label>
             <select name="crust" id="crust">
+              <option value="Hand Tossed">Hand Tossed</option>
               <option value="Thin Crust">Thin Crust</option>
               <option value="Stuffed Crust">Stuffed Crust</option>
               <option value="Cheese Crust Pizza">Cheese Crust Pizza</option>
               <option value="Thick Crust">Thick Crust</option>
+              <option value="Handmade Pan">Handmade Pan</option>
+              <option value="Brooklyn Style">Brooklyn Style</option>
             </select>
 
             <p>Select your pizza size:</p>
@@ -92,44 +148,101 @@
             <input type="radio" id="size3" name="size" value="large" />
             <label for="size3">Large</label><br />
             <input type="radio" id="size4" name="size" value="xlarge" />
-            <label for="size4">X-Large</label><br /><br />
+            <label for="size4">X-Large</label><br />
+            <input type="radio" id="size5" name="size" value="xxlarge" />
+            <label for="size5">XX-Large</label><br /><br />
 
             <p>Select your toppings:</p>
+            <hr />
+            <p>Meats</p>
+            <input type="checkbox" id="Ham" name="toppings[]" value="Ham" />
+            <label for="Ham">Ham</label><br />
+            <input type="checkbox" id="Beef" name="toppings[]" value="Beef" />
+            <label for="Beef">Beef</label><br />
+            <input
+              type="checkbox"
+              id="Salami"
+              name="toppings[]"
+              value="Salami"
+            />
+            <label for="Salami">Salami</label><br />
+            <input
+              type="checkbox"
+              id="ItalianSausage"
+              name="toppings[]"
+              value="Italian Sausage"
+            />
+            <label for="ItalianSausage">Italian Sausage</label><br />
             <input
               type="checkbox"
               id="Pepperoni"
-              name="toppings"
+              name="toppings[]"
               value="Pepperoni"
             />
             <label for="Pepperoni">Pepperoni</label><br />
             <input
               type="checkbox"
-              id="Mushroom"
-              name="toppings"
-              value="Mushroom"
-            />
-            <label for="Mushroom">Mushroom</label><br />
-            <input
-              type="checkbox"
               id="Sausage"
-              name="toppings"
+              name="toppings[]"
               value="Sausage"
             />
             <label for="Sausage">Sausage</label><br />
-            <input type="checkbox" id="Bacon" name="toppings" value="Bacon" />
+            <input type="checkbox" id="Bacon" name="toppings[]" value="Bacon" />
             <label for="Bacon">Bacon</label><br />
-            <input type="checkbox" id="Tomato" name="toppings" value="Tomato" />
-            <label for="Tomato">Tomato</label><br />
             <input
               type="checkbox"
               id="Chicken"
-              name="toppings"
+              name="toppings[]"
               value="Chicken"
             />
             <label for="Chicken">Chicken</label><br />
-            <input type="checkbox" id="Basil" name="toppings" value="Basil" />
+            <input
+              type="checkbox"
+              id="Mushroom"
+              name="toppings[]"
+              value="Mushroom"
+            />
+            <label for="Mushroom">Mushroom</label><br />
+            <hr />
+            <p>Veggies</p>
+            <input
+              type="checkbox"
+              id="Tomato"
+              name="toppings[]"
+              value="Tomato"
+            />
+            <label for="Tomato">Tomato</label><br />
+            <input type="checkbox" id="Basil" name="toppings[]" value="Basil" />
             <label for="Basil">Basil</label><br />
-            <input type="checkbox" id="Onion" name="toppings" value="Onion" />
+            <input
+              type="checkbox"
+              id="Pineapple"
+              name="toppings[]"
+              value="Pineapple"
+            />
+            <label for="Pineapple">Pineapple</label><br />
+            <input
+              type="checkbox"
+              id="Spinach"
+              name="toppings[]"
+              value="Spinach"
+            />
+            <label for="Spinach">Spinach</label><br />
+            <input
+              type="checkbox"
+              id="GreenPeppers"
+              name="toppings[]"
+              value="Green Peppers"
+            />
+            <label for="GreenPeppers">Green Peppers</label><br />
+            <input
+              type="checkbox"
+              id="BlackOlives"
+              name="toppings[]"
+              value="Black Olives"
+            />
+            <label for="BlackOlives">Black Olives</label><br />
+            <input type="checkbox" id="Onion" name="toppings[]" value="Onion" />
             <label for="Onion">Onion</label><br /><br />
 
             <input type="submit" value="Send" />
